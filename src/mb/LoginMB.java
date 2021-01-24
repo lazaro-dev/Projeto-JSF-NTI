@@ -57,7 +57,7 @@ public class LoginMB implements Serializable{
 
 	}
 	
-	public void logout(){
+	public String logout(){
         FacesContext.getCurrentInstance().getExternalContext().getSessionMap().remove("userlog");
         FacesContext.getCurrentInstance().getExternalContext().getSessionMap().remove("acesso");
         
@@ -66,6 +66,7 @@ public class LoginMB implements Serializable{
         FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
         this.usuario=null;
         RedirectUtil.redirecionar("/login");
+        return "";
 //        return "teste?faces-redirect=true";
     }
 	
