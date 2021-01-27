@@ -10,6 +10,16 @@
 	<ui:define name="menu">
 		<ui:include src="/addition/dashboardAdmin.xhtml" />
 	</ui:define>
-		
+	
+   	 <ui:define name="conteudo">
+    	<h:form styleClass="center">
+			<h:panelGrid columns="2" styleClass="center--item">
+				<h:outputLabel value="SEMIDEIA " />
+				<p:inputText value="" />
+			</h:panelGrid>
+		    
+		    <p:commandButton value="editar" styleClass="center--item"/>
+		</h:form>
     </ui:define>
+	
 </ui:composition>

@@ -6,14 +6,15 @@
     xmlns:p="http://primefaces.org/ui"
     >
 <h:head>
+<h:outputStylesheet library="css" name="styles.css"/>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Login</title>
 </h:head>
 
     <h:body>
-		<h:form>
+		<h:form styleClass="center">
 			<p:messages globalOnly="true" />
-			<h:panelGrid columns="2">
+			<h:panelGrid columns="2" styleClass="center--item">
 				<h:outputLabel value="Login: " />
 				<p:inputText value="#{loginMB.userlog}" />
 				<h:outputLabel value="Senha: " />
@@ -22,6 +23,7 @@
 			<p:commandButton value="Entrar" action="#{loginMB.login}" 
 				process="@form" 
 				update="@form"
+				styleClass="center--item"
 			/>
 		</h:form>       
     </h:body>

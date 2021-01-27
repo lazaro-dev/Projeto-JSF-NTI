@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/dashboard.xhtml">
+	
+	<ui:define name="menu">
+		<ui:include src="/addition/dashboardAdmin.xhtml" />
+	</ui:define>
+	
+    <ui:define name="conteudo">
+  
+    	<h:form>
+	        <p:dataTable value="#{loginMB.usuario}" 
+						 var="item"
+						 emptyMessage="Nenhum registro encontrado">
+						 
+				<f:facet name="header">
+					<h:outputText value="Produto - Listagem" />
+				</f:facet>
+				
+	            <p:column headerText="Usuário">
+	                <p:outputLabel value="#{item.nome}" />
+	            </p:column>
+	            
+                 <p:column headerText="Idade">
+	                <p:outputLabel value="#{item.idade}" />
+	            </p:column>
+	        </p:dataTable>
+		</h:form>
+    </ui:define>
+	
+</ui:composition>
