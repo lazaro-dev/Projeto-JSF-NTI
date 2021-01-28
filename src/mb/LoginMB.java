@@ -51,7 +51,6 @@ public class LoginMB implements Serializable{
 				}
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
 		}
 		return "";
 
